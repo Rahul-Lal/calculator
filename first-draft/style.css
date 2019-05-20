@@ -308,6 +308,8 @@
     height: auto;
     max-width: 100%;
   }
+
+
   
   audio {
     max-width: 100%;
@@ -1580,6 +1582,8 @@
   .button {
     background-color: white;
     border-color: #dbdbdb;
+    width: 12.5px;
+    height: 6.66px;
     border-width: 1px;
     color: #363636;
     cursor: pointer;

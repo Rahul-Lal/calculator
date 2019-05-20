@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="refresh" content="60">
-    <link type="stylesheet" rel="style.css">
+    <link type="stylesheet" href="style.css" rel="style.css">
     <script src="script.js"></script>
 </head>
 
@@ -15,24 +15,24 @@
                 <input id="txtOutput" class="textarea" type="text" readonly="readonly" />
             </tr>
             <tr>
-                <td><button class="button" id="btnSeven" onclick="pressSeven()">7</button></td>
-                <td><button class="button" id="btnEight" onclick="pressEight()">8</button></td>
-                <td><button class="button" id="btnNine" onclick="pressNine()">9</button></td>
+                <td><button class="button" id="btnSeven" onclick="btnSeven_Click()">7</button></td>
+                <td><button class="button" id="btnEight" onclick="btnEight_Click()">8</button></td>
+                <td><button class="button" id="btnNine" onclick="btnNine_Click()">9</button></td>
                 <td><button id="btnAddition" class="button" onclick="btnAddition_Click()">+</button></td>
-                <td><button id="btnSubtraction" class="button" onclick="">-</button></td>
+                <td><button id="btnSubtraction" class="button" onclick="btnSubtraction_Click()">-</button></td>
             </tr>
             <tr>
-                <td><button class="button" id="btnFour" onclick="pressFour()">4</button></td>
-                <td><button class="button" id="btnFive" onclick="pressFive()">5</button></td>
-                <td><button class="button" id="btnSix" onclick="pressSix()">6</button></td>
-                <td><button class="button" id="btnMultiplication" onclick="">x</button></td>
-                <td><button class="button" id="btnDivision" onclick="">÷</button></td>
+                <td><button class="button" id="btnFour" onclick="btnFour_Click()">4</button></td>
+                <td><button class="button" id="btnFive" onclick="btnFive_Click()">5</button></td>
+                <td><button class="button" id="btnSix" onclick="btnSix_Click()">6</button></td>
+                <td><button class="button" id="btnMultiplication" onclick="btnMultiplication_Click()">x</button></td>
+                <td><button class="button" id="btnDivision" onclick="btnDivision_Click()">÷</button></td>
             </tr>
             <tr>
-                <td><button class="button" id="btnOne" onclick="pressOne()">1</button></td>
-                <td><button class="button" id="btnTwo" onclick="pressTwo()">2</button></td>
-                <td><button class="button" id="btnThree" onclick="pressThree()">3</button></td>
-                <td><button class="button" id="btnZero" onclick="pressZero()">0</button></td>
+                <td><button class="button" id="btnOne" onclick="btnOne_Click()">1</button></td>
+                <td><button class="button" id="btnTwo" onclick="btnTwo_Click()">2</button></td>
+                <td><button class="button" id="btnThree" onclick="btnThree_Click()">3</button></td>
+                <td><button class="button" id="btnZero" onclick="btnZero_Click()">0</button></td>
                 <td><button class="button" id="btnEquals" onclick="btnEquals_Click()">=</button></td>
             </tr>
         </table>
