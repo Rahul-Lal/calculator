@@ -1,7 +1,6 @@
 var num1, num2, answer = 0, temporaryValue = "";
 var functionOfChoice = ["+", "-", ];
 var chosenFunction;
-var txtOutput_Value = document.getElementById("txtOutput");
 
 // declare for numerals
 var oneButton = document.getElementById("btnOne");
@@ -27,11 +26,11 @@ var equalbutton = document.getElementById("btnEquals");
 function saveValue() {
     if ((!isNaN(txtOutput_Value.value) || txtOutput_Value.value !== "." || txtOutput_Value.value !== "") && (num1 != undefined))
     {
-        document.getElementById("txtOutput") = "";
+        txtOutput = "";
         if (!isNaN(txtOutput_Value) || txtOutput_Value === ".")
         {
-            num2 = document.getElementById("txtOutput");
-            document.getElementById("txtOutput") = "";
+            num2 = txtOutput;
+            txtOutput = "";
         }
     }
     else {
@@ -59,10 +58,11 @@ function btnAddition_Click() {
     var temporaryValue = "";
     txtOutput_Value.innerText = temporaryValue;*/
 
-    if((txtOutput_Value.value != "") && (txtOutput_Value.value != ".") && (txtOutput_Value.value != undefined))
+    if((txtOutput.value !== "") && (txtOutput.value !== ".") && (txtOutput.value !== undefined))
     {
-        num1 = txtOutput_Value.value;
-        txtOutput_Value.innerHTML = "";
+        num1 = number(txtOutput);
+        chosenFunction = functionOfChoice[0];
+        txtOutput.value = "";
     } 
     else
     {
@@ -89,7 +89,7 @@ function btnDivision_Click() {
 }
 
 function btnEquals_Click() {
-    equation.push(temporaryValue);
+    /*equation.push(temporaryValue);
     num1 = Number(equation[0]);
 
     for (i = 1; i < equation.length; i++) {
@@ -111,8 +111,32 @@ function btnEquals_Click() {
 
         txtOutput_Value.innerHTML = answer;
         equation = [];
-        temporaryValue = "";
-    }
+        temporaryValue = "";*/
+
+        num2 = number(txtOutput.value);
+
+            if(chosenFunction === functionOfChoice[0])
+            {
+                answer = num1 + num2;
+            }
+            else if(chosenFunction === functionOfChoice[1])
+            {
+                answer = num1 - num2;
+            }
+            else if(chosenFunction === functionOfChoice[2])
+            {
+                answer = num1 * num2;
+            }
+            else if(chosenFunction === functionOfChoice[3])
+            {
+                answer = num1 / num2;
+            }
+            else
+            {
+                alert("No Value!!");
+            }
+
+            txtOutput.value = string(answer);
 }
 
 function negativeNumbers() {
@@ -124,47 +148,47 @@ function negativeNumbers() {
 }
 
 function btnOne_Click() {
-    document.getElementById("txtOutput").value += "1";
+    txtOutput.value += "1";
 }
 
 function btnTwo_Click() {
-    document.getElementById("txtOutput").value += "2";
+    txtOutput.value += "2";
 }
 
 function btnThree_Click() {
-    document.getElementById("txtOutput").value += "3";
+    txtOutput.value += "3";
 }
 
 function btnThree_Click() {
-    document.getElementById("txtOutput").value += "3";
+    txtOutput.value += "3";
 }
 
 function btnFour_Click() {
-    document.getElementById("txtOutput").value += "4";
+    txtOutput.value += "4";
 }
 
 function btnFive_Click() {
-    document.getElementById("txtOutput").value += "5";
+    txtOutput.value += "5";
 }
 
 function btnSix_Click() {
-    document.getElementById("txtOutput").value += "6";
+    txtOutput.value += "6";
 }
 
 function btnSeven_Click() {
-    document.getElementById("txtOutput").value += "7";
+    txtOutput.value += "7";
 }
 
 function btnEight_Click() {
-    document.getElementById("txtOutput").value += "8";
+    txtOutput.value += "8";
 }
 
 function btnNine_Click() {
-    document.getElementById("txtOutput").value += "9";
+    txtOutput.value += "9";
 }
 
 function btnZero_Click() {
-    document.getElementById("txtOutput").value += "0";
+    txtOutput.value += "0";
 }
 
 // numeral buttons
