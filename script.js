@@ -60,8 +60,9 @@ function btnAddition_Click() {
 
     if((txtOutput.value !== "") && (txtOutput.value !== ".") && (txtOutput.value !== undefined))
     {
-        num1 = number(txtOutput);
+        num1 = number(txtOutput.value);
         chosenFunction = functionOfChoice[0];
+        console.log(string(num1) + " " + chosenFunction);
         txtOutput.value = "";
     } 
     else
